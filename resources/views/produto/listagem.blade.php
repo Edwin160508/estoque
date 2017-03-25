@@ -26,8 +26,10 @@
 				<a href="/produtos/mostra/{{$p->id}}">
 					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 				</a>
-				<a href="/produtos/novo/">
-					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</td>
+			<td>
+				<a href="/produtos/remove/{{$p->id}}">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
 				</a>
 			</td>
 		</tr>
@@ -40,5 +42,7 @@
 		<p>Produto {{old('nome')}} adicionado com sucesso!</p>
 	</div>
 @endif
+
+
 
 @stop
