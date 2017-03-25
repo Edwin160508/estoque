@@ -2,6 +2,16 @@
 
 @section('conteudo')
 
+<div class="alert alert-danger">
+	<ul>
+	@foreach($errors->all() as $erro)
+		<li>{{$erro}}</li>
+	@endforeach	
+	</ul>
+</div>
+
+
+
 <h1>Cadastro de Produtos</h1>
 <form action="/produtos/adiciona/" method="post">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -17,6 +27,10 @@
 	<div class="form-group">
 		<label for="quantidade">Quantidade:</label>
 		<input type="text" name="quantidade" id="quantidade" class="form-control" placeholder="Quantidade" />
+	</div>
+	<div class="form-group">
+		<label for="tamanho">Tamanho:</label>
+		<input type="text" name="tamanho" id="tamanho" class="form-control" placeholder="Tamanho" />
 	</div>
 	<div class="form-group">
 		<label for="descricao">Descrição:</label>
