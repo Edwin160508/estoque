@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
-
+        <title>Controle de estoque</title>
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <style>
@@ -37,8 +37,9 @@
     </head>
     <body>
         <div class="container">
+        
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Bem vindo ao Estoque Laravel 5</div>
             </div>
         </div>
     </body>
