@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+Route::get('/', 'LoginController@form');
 
 Route::get('/produtos', 'ProdutoController@lista');
 Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
@@ -21,9 +22,13 @@ Route::get('/produtos/novo/', 'ProdutoController@novo');
 Route::post('/produtos/adiciona/', 'ProdutoController@adiciona');
 Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
 
-/*Rotas de login*/
+/*Rotas tela de login pronta do Laravel*/
 Route::get('/home', 'HomeController@index');
 Route::controllers([
 	'auth'=>'Auth\AuthController',
 	'password'=>'Auth\PasswordController'
 ]);
+
+/*Rotas tela de login auternativo*/
+Route::get('/login', 'LoginController@form');
+Route::post('/login', 'LoginController@login');

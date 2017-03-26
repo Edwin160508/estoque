@@ -5,13 +5,18 @@ use Request;
 use App\Produto;
 use Validator;
 use App\Http\Requests\ProdutoRequest;
+use App\Categoria;
 /**
 * 
 */
 class ProdutoController extends Controller{
+
+	/*Defidindo a middleware apenas no controlador ProdutoController*/
+	public function __construct(){
+		$this->middleware('autorizador');
+	}
 	
 	public function lista (){
-
 		$produtos = Produto::all();//DB::select('select * from produtos');
 
 		return view('produto.listagem')->with('produtos', $produtos);
@@ -33,7 +38,7 @@ class ProdutoController extends Controller{
 	}
 
 	public function novo(){
-		return view('produto.formulario');
+		return view('produto.formulario')->with('categorias', Categoria::all());
 	}
 
 	/*O parâmetro deste método é necessário, para validar seus campos, pelo fato do form de produto conter muitos parâmetros.*/

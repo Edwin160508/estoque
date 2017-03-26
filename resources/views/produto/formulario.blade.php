@@ -33,6 +33,14 @@
 		<input type="text" name="tamanho" id="tamanho" class="form-control" placeholder="Tamanho" />
 	</div>
 	<div class="form-group">
+		<label for="categoria_id">Categoria:</label>
+		<select class="form-control" name="categoria_id">
+			@foreach($categorias as $c)
+				<option value="{{$c->id}}">{{$c->nome}}</option>
+			@endforeach
+		</select>
+	</div>
+	<div class="form-group">
 		<label for="descricao">Descrição:</label>
 		<textarea class="form-control" name="descricao" placeholder="Descrição"></textarea>
 	</div>

@@ -1,7 +1,4 @@
-tbody tr:nth-child(odd){
-	background-color: #ccc;
-}
-
-tbody tr:nth-child(even){
-	background-color: white;
-}
+.paragrafo-menu {
+	padding-top: 15px; 
+	padding-bottom: 15px;
+}	
