@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use App\Categoria;
+use CategoriaTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,10 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        /*Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        $this->call(CategoriaTableSeeder::class);
 
-        Model::reguard();
+        Model::reguard();*/
+        DB::table('categorias')->insert(['nome' => 'ESPORTE',
+                                         'nome' => 'BRINQUEDO']);
     }
 }
