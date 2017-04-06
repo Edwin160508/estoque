@@ -29,6 +29,6 @@ Route::controllers([
 	'password'=>'Auth\PasswordController'
 ]);
 
-/*Rotas tela de login auternativo*/
+/*Rotas tela de login alternativo*/
 Route::get('/login', 'LoginController@form');
 Route::post('/login', 'LoginController@login');
